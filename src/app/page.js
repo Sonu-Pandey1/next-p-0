@@ -26,6 +26,27 @@ function Page() {
     }
   };
 
+  const deleteTodo = async (Id) => {
+    const response = await axios.delete('/api', {
+      params: {
+        mongoId: Id
+      }
+    })
+    toast.success(response.data.msg);
+    fetchTodos();
+  }
+
+  const completeTodo = async (id) => {
+    const response = await axios.put('/api', {}, {
+      params: {
+        mongoId: id
+
+      }
+    })
+    toast.success(response.data.msg)
+    fetchTodos()
+  };
+
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -91,7 +112,7 @@ function Page() {
                     </thead>
                     <tbody>
                       {todoData.map((item, index) => (
-                        <Table key={index} id={index} title={item.title} description={item.description} complete={item.isCompleted} mongoId={item._id} />
+                        <Table key={index} id={index} title={item.title} description={item.description} complete={item.isCompleted} mongoId={item._id} deleteTodo={deleteTodo} completeTodo={completeTodo} />
                       ))}
                     </tbody>
                   </table>

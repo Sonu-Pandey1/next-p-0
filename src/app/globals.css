@@ -51,3 +51,6 @@ textarea{
 .table-hover tbody tr:hover {
     background-color: #e9ecef;
 }
+.container-fluid{
+    margin-top: 200px;
+}

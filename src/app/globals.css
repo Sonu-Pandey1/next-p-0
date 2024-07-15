@@ -6,3 +6,48 @@
     background-color: rebeccapurple;
     border: 3px solid or;
 }
+
+input{
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+}
+
+textarea{
+    outline: none;
+
+}
+
+.formContainer{
+    /* background-color: rgb(223, 207, 207); */
+    padding: 20px 25px;
+
+    box-shadow: 6px 6px 20px rgb(125, 124, 124);
+    border-radius: 5px;
+
+
+}
+.container-fulid {
+    margin-top: 200px;
+}
+
+/* table */
+/* src/App.css */
+.table {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
